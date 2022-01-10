@@ -40,7 +40,7 @@ public class Main {
   
   @RequestMapping("/hello")
 String hello(Map<String, Object> model) {
-  model.put("message", "Welcome to my app!");
+  model.put("message", "Welcome to onestarrrrrrrr app!");
   return "hello";
 }
 
