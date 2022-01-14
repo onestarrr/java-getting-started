@@ -16,7 +16,7 @@
 
 package com.example;
 
-import static javax.measure.unit.SI.KILOGRAM;
+import javax.measure.unit.SI.KILOGRAM;
 import javax.measure.quantity.Mass;
 import org.jscience.physics.model.RelativisticModel;
 import org.jscience.physics.amount.Amount;
