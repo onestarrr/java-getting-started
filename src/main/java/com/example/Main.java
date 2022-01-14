@@ -16,6 +16,10 @@
 
 package com.example;
 
+import static javax.measure.unit.SI.KILOGRAM;
+import javax.measure.quantity.Mass;
+import org.jscience.physics.model.RelativisticModel;
+import org.jscience.physics.amount.Amount;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,9 +43,11 @@ import java.util.Map;
 public class Main {
   
   @RequestMapping("/hello")
-String hello(Map<String, Object> model) {
-  model.put("message", "Welcome to onestarrrrrrrr app!");
-  return "hello";
+    String hello(Map<String, Object> model) {
+    RelativisticModel.select();
+    Amount<Mass> m = Amount.valueOf("12 GeV").to(KILOGRAM);
+    model.put("science", "E=mc^2: 12 GeV = " + m.toString());
+    return "hello";
 }
 
   @Value("${spring.datasource.url}")
