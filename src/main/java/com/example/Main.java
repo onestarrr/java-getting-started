@@ -46,6 +46,7 @@ public class Main {
     String hello(Map<String, Object> model) {
     RelativisticModel.select();
     Amount<Mass> m = Amount.valueOf("12 GeV").to(KILOGRAM);
+    model.put("message", "Welcome to onestarrrrrrrr app!");
     model.put("science", "E=mc^2: 12 GeV = " + m.toString());
     return "hello";
 }
